@@ -33,7 +33,8 @@
         };
 
         var game = new Phaser.Game(config);
-
+        var score = 0;
+        var scoreText;
         function preload() {
             this.load.image('sky', 'assets/sky.png');
             this.load.image('ground', 'assets/platform.png');
@@ -94,6 +95,8 @@
                 frameRate: 10,
                 repeat: -1,
             });
+
+            scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
         }
 
         function update() {
@@ -121,6 +124,8 @@
 
         function collectStar(player, star) {
             star.disableBody(true, true);
+            score += 10;
+            scoreText.setText('Score: ' + score);
         }
 
     </script>
