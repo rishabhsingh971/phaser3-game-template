@@ -83,6 +83,7 @@
                 repeat: -1,
             });
 
+            cursors = this.input.keyboard.createCursorKeys();
             this.anims.create({
                 key: 'turn',
                 frames: [{ key: 'dude', frame: 4 }],
@@ -100,7 +101,6 @@
         }
 
         function update() {
-            cursors = this.input.keyboard.createCursorKeys();
             if (cursors.left.isDown) {
                 player.setVelocityX(-160);
 
