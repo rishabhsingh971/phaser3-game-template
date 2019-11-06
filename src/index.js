@@ -1,9 +1,9 @@
-var Sample = new Phaser.Class({
-    Extends: Phaser.Scene,
+import Phaser from 'phaser';
 
-    initialize: function Sample() {
-        Phaser.Scene.call(this, { key: 'sample' });
-    },
+class Sample extends Phaser.Scene {
+    constructor() {
+        super('sample');
+    }
 
     preload() {
         this.load.image('sky', 'assets/sky.png');
@@ -14,7 +14,7 @@ var Sample = new Phaser.Class({
             'assets/dude.png',
             { frameWidth: 32, frameHeight: 48 }
         );
-    },
+    }
 
     create() {
         // add sky
@@ -36,7 +36,7 @@ var Sample = new Phaser.Class({
         this.initAnimations();
 
         this.initPhysics();
-    },
+    }
 
     createPlatforms() {
         const platforms = this.physics.add.staticGroup();
@@ -46,7 +46,7 @@ var Sample = new Phaser.Class({
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
         return platforms;
-    },
+    }
 
     createPlayer() {
         const player = this.physics.add.sprite(100, 450, 'dude');
@@ -54,11 +54,11 @@ var Sample = new Phaser.Class({
         player.setBounce(0.2);
         player.setCollideWorldBounds(true);
         return player;
-    },
+    }
 
     createBombGroup() {
         return this.physics.add.group();
-    },
+    }
 
     createStars() {
         const stars = this.physics.add.group({
@@ -71,11 +71,11 @@ var Sample = new Phaser.Class({
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         });
         return stars;
-    },
+    }
 
     createScoreText() {
         return this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-    },
+    }
 
     initAnimations() {
         this.anims.create({
@@ -97,7 +97,7 @@ var Sample = new Phaser.Class({
             frameRate: 10,
             repeat: -1
         });
-    },
+    }
 
     initPhysics() {
         // player - platform
@@ -114,7 +114,7 @@ var Sample = new Phaser.Class({
 
         // bomb - player
         this.physics.add.overlap(this.player, this.bombs, this.hitBomb, null, this);
-    },
+    }
 
     update() {
         if (this.cursors.left.isDown) {
@@ -134,7 +134,7 @@ var Sample = new Phaser.Class({
         if (this.cursors.up.isDown && this.player.body.touching.down) {
             this.player.setVelocityY(-330);
         }
-    },
+    }
 
     collectStar(player, star) {
         star.disableBody(true, true);
@@ -153,16 +153,16 @@ var Sample = new Phaser.Class({
             bomb.setCollideWorldBounds(true);
             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
         }
-    },
+    }
 
-    hitBomb: function (player, bomb) {
+    hitBomb(player, bomb) {
         this.physics.pause();
 
         player.setTint(0xff0000);
 
         player.anims.play('turn');
     }
-});
+};
 
 const config = {
     type: Phaser.AUTO,
