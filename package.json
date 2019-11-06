@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Phaser sample game",
   "main": "index.js",
-  "repository": "https://@github.com/rishabhsingh971/phasor-sample-game.git",
+  "repository": "https://github.com/rishabhsingh971/phasor-sample-game.git",
   "author": "Rishabh Singh",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rishabhsingh971/phasor-sample-game/issues"
+  },
+  "homepage": "https://github.com/rishabhsingh971/phasor-sample-game#readme",
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
