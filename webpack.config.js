@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -25,10 +25,11 @@ module.exports = {
       }
     ]
   },
+  output: {
+    path: path.resolve(process.cwd(), 'dist'),
+  },
   plugins: [
-    new CleanWebpackPlugin(["dist"], {
-      root: path.resolve(__dirname, "../")
-    }),
+    new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true)
