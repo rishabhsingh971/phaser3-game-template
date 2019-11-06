@@ -15,7 +15,8 @@
   },
   "homepage": "https://github.com/rishabhsingh971/phasor-sample-game#readme",
   "eslintIgnore": [
-    "webpack.config.js",
+    "webpack.common.js",
+    "webpack.dev.js",
     "webpack.prod.js"
   ],
   "devDependencies": {
