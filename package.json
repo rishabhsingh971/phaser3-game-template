@@ -1,0 +1,9 @@
+{
+  "name": "phaser-sample-game",
+  "version": "1.0.0",
+  "description": "Phaser sample game",
+  "main": "index.js",
+  "repository": "https://@github.com/rishabhsingh971/phasor-sample-game.git",
+  "author": "Rishabh Singh",
+  "license": "MIT"
+}
