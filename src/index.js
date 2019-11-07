@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 class Sample extends Phaser.Scene {
     constructor() {
         super('sample');
+        this.num_stars = 12;
     }
 
     preload() {
@@ -64,10 +65,11 @@ class Sample extends Phaser.Scene {
     }
 
     createStars() {
+        const n = this.num_stars;
         const stars = this.physics.add.group({
             key: 'star',
-            repeat: 11,
-            setXY: { x: 12, y: 0, stepX: 70 }
+            repeat: n - 1,
+            setXY: { x: 16, y: 0, stepX: config.width / n }
         });
 
         stars.children.iterate(function (child) {
