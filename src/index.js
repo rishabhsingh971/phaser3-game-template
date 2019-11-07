@@ -18,6 +18,10 @@ class Sample extends Phaser.Scene {
                 frameHeight: 48
             }
         );
+        this.load.spritesheet('explosion', 'assets/explosion.png', {
+            frameWidth: 16,
+            frameHeight: 16
+        });
     }
 
     create() {
@@ -102,6 +106,14 @@ class Sample extends Phaser.Scene {
             frameRate: 10,
             repeat: -1
         });
+
+        this.anims.create({
+            key: 'explode',
+            frames: this.anims.generateFrameNumbers('explosion'),
+            frameRate: 20,
+            repeat: 0,
+            hideOnComplete: false
+        });
     }
 
     initPhysics() {
@@ -163,6 +175,8 @@ class Sample extends Phaser.Scene {
     hitBomb(player, bomb) {
         this.physics.pause();
 
+        bomb.setTexture('explosion');
+        bomb.play('explode');
         player.setTint(0xff0000);
 
         player.anims.play('turn');
