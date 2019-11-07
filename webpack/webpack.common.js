@@ -36,7 +36,7 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: "./src/index.html"
     }),
     new CopyWebpackPlugin([
       { from: 'assets', to: 'assets' }
