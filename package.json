@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js ",
-    "start": "webpack-dev-server --config webpack/webpack.dev.js --open"
+    "start": "webpack-dev-server --config webpack/webpack.dev.js --open",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "repository": "https://github.com/rishabhsingh971/phasor-sample-game.git",
   "author": "Rishabh Singh",
