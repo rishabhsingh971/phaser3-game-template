@@ -86,7 +86,7 @@ class Ships extends Phaser.Scene {
         });
         // POWER UPS
 
-        // 2.1 Two Animations for the power ups
+        // Two Animations for the power ups
         this.anims.create({
             key: 'red',
             frames: this.anims.generateFrameNumbers('power-up', {
@@ -132,9 +132,9 @@ class Ships extends Phaser.Scene {
     }
 
     update() {
-        this.moveShip(this.ship1, 1);
-        this.moveShip(this.ship2, 2);
-        this.moveShip(this.ship3, 3);
+        this.moveShip(this.ship1, 5);
+        this.moveShip(this.ship2, 10);
+        this.moveShip(this.ship3, 15);
 
         this.background.tilePositionY -= 0.5;
     }
