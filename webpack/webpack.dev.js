@@ -3,7 +3,8 @@ const common = require("./webpack.common");
 
 const dev = {
   mode: "development",
-  devtool: "nosources-source-map",
+  // devtool: "eval",
+  devtool: "eval-source-map",
   devServer: {
     open: true
   },
