@@ -16,21 +16,21 @@ const prod = {
         }
       }
     },
-    minimize: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           output: {
             comments: false
           },
-        }
+        },
+        // extractComments: false,
       })
     ]
   },
   devtool: false,
   performance: {
-    maxEntrypointSize: 900000,
-    maxAssetSize: 900000
+    maxEntrypointSize: 999000,
+    maxAssetSize: 999000
   },
 };
 
