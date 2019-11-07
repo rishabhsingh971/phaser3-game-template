@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ['./src/ships.js'],
   output: {
     path: path.resolve(process.cwd(), 'dist'),
     filename: '[name].bundle.js',

@@ -12,7 +12,10 @@ class Sample extends Phaser.Scene {
         this.load.image('bomb', 'assets/bomb.png');
         this.load.spritesheet('dude',
             'assets/dude.png',
-            { frameWidth: 32, frameHeight: 48 }
+            {
+                frameWidth: 32,
+                frameHeight: 48
+            }
         );
     }
 
@@ -166,8 +169,8 @@ class Sample extends Phaser.Scene {
 
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: window.innerWidth,
+    height: window.innerHeight,
     physics: {
         default: 'arcade',
         arcade: {
