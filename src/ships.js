@@ -160,8 +160,12 @@ class Ships extends Phaser.Scene {
 
 var config = {
     type: Phaser.AUTO,
-    width: window.innerWidth,
-    height: window.innerHeight,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    width: 800,
+    height: 600,
     backgroundColor: 0x000000,
     scene: [Ships],
     pixelArt: true,
