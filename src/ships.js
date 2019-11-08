@@ -132,9 +132,9 @@ class Ships extends Phaser.Scene {
     }
 
     update() {
-        this.moveShip(this.ship1, 5);
-        this.moveShip(this.ship2, 10);
-        this.moveShip(this.ship3, 15);
+        this.moveShip(this.ship1, 3);
+        this.moveShip(this.ship2, 6);
+        this.moveShip(this.ship3, 10);
 
         this.background.tilePositionY -= 0.5;
     }
