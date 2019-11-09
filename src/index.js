@@ -102,8 +102,6 @@ class Sample extends Phaser.Scene {
             }
         }, this);
 
-        this.scoreText.setText('v15');
-
         var FKey = this.input.keyboard.addKey('F');
 
         FKey.on('down', () => {
