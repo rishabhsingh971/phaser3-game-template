@@ -39,7 +39,7 @@ module.exports = {
       template: "./src/index.html"
     }),
     new CopyWebpackPlugin([
-      { from: 'assets', to: 'assets' }
+      { from: 'src/assets', to: 'assets' }
     ]),
   ]
 };
