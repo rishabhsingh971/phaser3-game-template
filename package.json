@@ -1,20 +1,20 @@
 {
-  "name": "phaser-sample-game",
+  "name": "phaser3-game-template",
   "version": "1.0.0",
-  "description": "Phaser sample game",
+  "description": "Phaser3 game template",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js ",
     "start": "webpack-dev-server --config webpack/webpack.dev.js --open",
     "deploy": "yarn build && gh-pages -d dist"
   },
-  "repository": "https://github.com/rishabhsingh971/phasor-sample-game.git",
+  "repository": "https://github.com/rishabhsingh971/phasor-game-template.git",
   "author": "Rishabh Singh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rishabhsingh971/phasor-sample-game/issues"
+    "url": "https://github.com/rishabhsingh971/phasor-game-template/issues"
   },
-  "homepage": "https://github.com/rishabhsingh971/phasor-sample-game#readme",
+  "homepage": "https://github.com/rishabhsingh971/phasor-game-template#readme",
   "eslintIgnore": [
     "webpack.common.js",
     "webpack.dev.js",
