@@ -7,7 +7,11 @@ class Ships extends Phaser.Scene {
 
     preload() {
         this.load.image('background', 'assets/ships/background.png');
-        this.load.spritesheet('ship', 'assets/ships/sprites/ship.png', {
+        this.load.spritesheet('player', 'assets/ships/sprites/player.png', {
+            frameWidth: 16,
+            frameHeight: 24
+        });
+        this.load.spritesheet('ship', 'assets/ships/sprites/ship1.png', {
             frameWidth: 16,
             frameHeight: 16
         });
