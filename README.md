@@ -7,7 +7,7 @@ A Phaser 3 game template with ES6 support via Babel 7 and Webpack 4 that include
 
 
 ## Content
-- [.babelrc](./.babelrc) - ) Babel 7 config. Babel converts/transpiles current code into backward compatible code. [Know more](https://babeljs.io/docs/en/).
+- [.babelrc](./.babelrc) - Babel 7 config. Babel converts/transpiles current code into backward compatible code. [Know more](https://babeljs.io/docs/en/).
 - [.eslintrc](./.eslintrc) - ESLint config. ESLint is a javascript linting utility. [Know more](https://eslint.org/docs/about/)
 - [webpack](./webpack/) - Webpack 4 configs (divided into common, dev and prod). Webpack is used to bundle and build source files. [Know more](https://webpack.js.org/concepts/)
 - [package.json](./package.json) - Project config which contains project metadata(description, version, scripts, etc). [Know more](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)
