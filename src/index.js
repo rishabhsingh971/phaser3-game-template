@@ -19,6 +19,10 @@ class Sample extends Phaser.Scene {
             frameWidth: 16,
             frameHeight: 16
         });
+        this.load.spritesheet('fullscreen', 'assets/fullscreen.png', {
+            frameWidth: 64,
+            frameHeight: 64
+        });
     }
 
     create() {
@@ -38,6 +42,7 @@ class Sample extends Phaser.Scene {
         this.score = 0;
         this.scoreText = this.createScoreText();
 
+        this.addFullScreenShortcut();
         this.initAnimations();
 
         this.initPhysics();
@@ -81,6 +86,35 @@ class Sample extends Phaser.Scene {
 
     createScoreText() {
         return this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    }
+
+    addFullScreenShortcut() {
+        var button = this.add.image(800 - 16, 16, 'fullscreen', 0).setOrigin(1, 0).setInteractive();
+
+        button.on('pointerup', () => {
+            if (this.scale.isFullscreen) {
+                button.setFrame(0);
+                this.scale.stopFullscreen();
+            } else {
+                button.setFrame(1);
+
+                this.scale.startFullscreen();
+            }
+        }, this);
+
+        this.scoreText.setText('v15');
+
+        var FKey = this.input.keyboard.addKey('F');
+
+        FKey.on('down', () => {
+            if (this.scale.isFullscreen) {
+                button.setFrame(0);
+                this.scale.stopFullscreen();
+            } else {
+                button.setFrame(1);
+                this.scale.startFullscreen();
+            }
+        }, this);
     }
 
     initAnimations() {
